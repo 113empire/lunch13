@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+    <head>
+        <meta charset="UTF-8">
+        <title>113午餐訂購平台</title>
+        <link href="/templates/css/reset.css" rel="stylesheet" type="text/css ">
+        <link href="/templates/css/order.css" rel="stylesheet" type="text/css">
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="title">午餐訂購</h1>
+        </header>
+        
+        <main>
+            <div class="enter-area">
+                <form method="POST" action="/order/process">
+                    <label for="school_num" class="label">學號</label>
+                    <input type="textarea" name="school_num" class="textarea" require autofocus>
+                    <br>
+                    
+                    <label for="seat_num" class="label">座號</label>
+                    <input type="textarea" name="seat_" class="textarea" require>
+                    <br>
+                    
+                    <label><input type="radio" name="restaurant" value="悟饕" class="radio">悟饕($65)</label>
+                    <label><input type="radio" name="restaurant" value="宜珍" class="radio">宜珍($50)</label>
+                    <label><input type="radio" name="restaurant" value="名台" class="radio">名台($50)</label>
+                    <br>
+                    <label><input type="radio" name="restaurant" value="三五" class="radio">三五($50)</label>
+                    <label><input type="radio" name="restaurant" value="東東香" class="radio">東東香($50)</label>
+                    <br>
+                    <label><input type="radio" name="restaurant" value="一起來" class="radio">一起來($45)</label>
+                    <br>
+                    
+                    <p class="hint-text">按下送出後將立即扣款，且內容不得更改，請審慎考慮。<a href="/menu">本週菜單</a></p>
+                    <br>
+                    
+                    <input type="submit" value="送出" class="submit">
+                    
+                </form>
+                
+            </div>
+            
+            
+            
+        </main>
+        
+        <footer class="footer">
+            <p>Copyright © 2020承峻工作室</p>
+        </footer>
+    </body>
+</html>
