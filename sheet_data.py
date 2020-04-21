@@ -40,11 +40,12 @@ def find(work_sheet, goal):
 
 def add_money(school_number, seat_number, how_much):
     global money_sheet
-    i = find(money_sheet, school_number)
+    i = seat_number + 1
 
     if money_sheet.cell(i, 1).value==school_number and money_sheet.cell(i, 2).value==seat_number:
-        total = int(money_sheet.cell(i, 3).value)+how_much
+        total = int(money_sheet.cell(i, 3).value)+int(how_much)
         money_sheet.update_cell(i, 3, total)
+        return total
         
     else:
         return False
