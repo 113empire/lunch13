@@ -10,9 +10,6 @@ def index():
 
 @app.route('/order/')
 def order():
-    #
-    add_money(811406, 21, 50)
-    #
     return render_template('order.html')
 
 @app.route('/order_process/', methods=['POST'])
