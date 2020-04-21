@@ -4,9 +4,13 @@ from oauth2client.service_account import ServiceAccountCredentials as sac
 
 app = Flask(__name__)
 
+#
+scope = ['https://spreadsheets.google.com/feeds', 
+         'https://www.googleapis.com/auth/drive']
 
-    
-
+cr = sac.from_json_keyfile_name('model/google_auth.json', scope)
+gs = gspread.authorize(cr)
+#
 
 @app.route('/')
 def index():
