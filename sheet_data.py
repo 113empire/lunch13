@@ -42,7 +42,7 @@ def add_money(school_number, seat_number, how_much):
     global money_sheet
     i = find(money_sheet, school_number)
 
-    if money_sheet.cell(i, 1)==school_number and money_sheet.cell(i, 2)==seat_number:
+    if money_sheet.cell(i, 1).value==school_number and money_sheet.cell(i, 2).value==seat_number:
         total = int(money_sheet.cell(i, 3).value)+how_much
         money_sheet.update_cell(i, 3, total)
         
