@@ -13,9 +13,10 @@ money_sheet = sh.worksheet('money')
 account_sheet = sh.worksheet('account')
 session_sheet = sh.worksheet('session')
 
-order_values = ['日期', '座號', '選購餐廳', '交易金額']
+order_values = ['日期', '座號', '選購餐廳', '交易金額', 'index']
 order_sheet.insert_row(order_values, 1)
-order_sheet.resize(1)
+order_sheet.update_cell(2, 4, 2)
+order_sheet.resize(2)
 
 money_values = ['學號', '座號', '餘額']
 money_sheet.insert_row(money_values, 1)
@@ -26,22 +27,21 @@ for a in range(2,32):
 money_sheet.resize(31)
 
 
-account_values = ['帳號', '密碼']
+account_values = ['帳號', '密碼', 'index']
 account_sheet.insert_row(account_values, 1)
-account_sheet.resize(1)
+account_sheet.update_cell(2, 3, 2)
+account_sheet.resize(2)
 
 
-session_values = ['session', 'cookie']
+session_values = ['session', 'cookie', 'index']
 session_sheet.insert_row(session_values, 1)
-session_sheet.resize(1)
+session_sheet.update_cell(2, 3, 2)
+session_sheet.resize(2)
 
 
-
+'''
 def find(work_sheet, goal):
-    for i in range( 1, len(work_sheet.col_values(1)) ):
-        if work_sheet.cell(i, 1).value==goal:
-            return i
-    return False
+    '''
 
 def add_money(school_number, seat_number, how_much):
     global money_sheet
