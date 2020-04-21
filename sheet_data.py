@@ -31,18 +31,18 @@ session_sheet.insert_row(session_values, 1)
 
 
 def find(work_sheet, value):
-    for i in range( 1, len(work_sheet.col_values(1))+1 ):
+    for i in range( 1, 100 ):
         if work_sheet.cell(i, 1)==work_sheet.cell(i, 1):
             return i
     return False
 
 def add_money(school_number, seat_number, how_much):
     global money_sheet
-    #i = find(money_sheet, school_number)
-    i = 2
+    i = find(money_sheet, school_number)
 
-    if money_sheet.cell(i, 1)-811385==money_sheet.cell(i, 2):
-        money_sheet.update_cell(i, 3, money_sheet.cell(i, 3)+how_much)
+    if money_sheet.cell(i, 1)==school_number and money_sheet.cell(i, 2)==seat_number:
+        total = int(money_sheet.cell(i, 3))+how_much
+        money_sheet.update_cell(i, 3, total)
         
     else:
         return False
