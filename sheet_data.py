@@ -21,7 +21,7 @@ money_values = ['學號', '座號', '餘額']
 money_sheet.insert_row(money_values, 1)
 
 for a in range(2,32):
-    li = [811385+a, a-1, 0]
+    li = [811384+a, a-1, 0]
     money_sheet.insert_row(li, a)
 money_sheet.resize(31)
 
