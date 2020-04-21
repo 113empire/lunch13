@@ -38,8 +38,8 @@ def find(work_sheet, value):
 
 def add_money(school_number, seat_number, how_much):
     global money_sheet
-    #index = find(money_sheet, school_number)
-    index = 2
+    #i = find(money_sheet, school_number)
+    i = 2
 
     if money_sheet.cell(i, 1)-811385==money_sheet.cell(i, 2):
         money_sheet.update_cell(i, 3, money_sheet.cell(i, 3)+how_much)
