@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect
-import sheet_data
+from sheet_data import *
 
 app = Flask(__name__)
 
@@ -11,7 +11,7 @@ def index():
 @app.route('/order/')
 def order():
     #
-    sheet_data.add_money(811406, 21, 50)
+    add_money(811406, 21, 50)
     #
     return render_template('order.html')
 
