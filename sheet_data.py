@@ -20,6 +20,8 @@ order_sheet.insert_row(order_values, 1)
 money_values = ['學號', '座號', '餘額']
 money_sheet.insert_row(money_values, 1)
 
+money_sheet.insert_row([811406, 21, 0],2)
+
 
 account_values = ['帳號', '密碼']
 account_sheet.insert_row(account_values, 1)
