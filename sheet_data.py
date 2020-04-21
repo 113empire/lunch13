@@ -1,5 +1,5 @@
 import gspread
-#from ... import ... as ...
+from oauth2client.service_account import ServiceAccountCredentials as sac
 
 scope = ['https://spreadsheets.google.com/feeds', 
          'https://www.googleapis.com/auth/drive']
