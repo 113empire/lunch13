@@ -25,6 +25,6 @@ account_values = ['帳號', '密碼']
 account_sheet.insert_row(account_values, 1)
 account_sheet.resize(1)
 
-session_values = ['帳號', '密碼']
+session_values = ['session', 'cookie']
 session_sheet.insert_row(session_values, 1)
 session_sheet.resize(1)
