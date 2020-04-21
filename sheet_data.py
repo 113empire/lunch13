@@ -32,7 +32,7 @@ session_sheet.insert_row(session_values, 1)
 
 def find(work_sheet, value):
     for i in range( 1, 100 ):
-        if work_sheet.cell(i, 1)==work_sheet.cell(i, 1):
+        if work_sheet.cell(i, 1).value==work_sheet.cell(i, 1).value:
             return i
     return False
 
@@ -41,7 +41,7 @@ def add_money(school_number, seat_number, how_much):
     i = find(money_sheet, school_number)
 
     if money_sheet.cell(i, 1)==school_number and money_sheet.cell(i, 2)==seat_number:
-        total = int(money_sheet.cell(i, 3))+how_much
+        total = int(money_sheet.cell(i, 3).value)+how_much
         money_sheet.update_cell(i, 3, total)
         
     else:
