@@ -30,9 +30,9 @@ session_sheet.insert_row(session_values, 1)
 
 
 
-def find(work_sheet, value):
-    for i in range( 1, 100 ):
-        if work_sheet.cell(i, 1).value==work_sheet.cell(i, 1).value:
+def find(work_sheet, goal):
+    for i in range( 1, len(work_sheet.col_values(1)) ):
+        if work_sheet.cell(i, 1).value==goal:
             return i
     return False
 
