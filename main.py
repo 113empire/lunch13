@@ -6,6 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
+    add_money(811406, 21, 50)
     return redirect('/order/')
 
 @app.route('/order/')
