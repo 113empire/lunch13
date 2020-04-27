@@ -28,7 +28,7 @@ def add_money(school_number, seat_number, how_much):
     global money_sheet
 
     try:
-        cell = money_sheet.find('str(school_number)') #尋找學號
+        cell = money_sheet.find(str(school_number)) #尋找學號
         r = cell.row #學號的列(橫)
         c = cell.col #學號的欄(直)
 
@@ -40,7 +40,7 @@ def add_money(school_number, seat_number, how_much):
     except:
         return False
 
-add_money('811406', '21', '50')
+result = add_money('811406', '21', '50')
 
 #扣錢
 #def spend_money(school_number, seat_number, how_much):
