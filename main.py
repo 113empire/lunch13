@@ -14,9 +14,9 @@ def order():
 
 @app.route('/order_process', methods=['POST'])
 def order_process():
-    school_num = request.form.get('school_num')
-    seat_num = request.form.get('seat_num')
-    restaurant = request.form.get('restaurant')
+    school_num = request.form.get('school_num') #OK
+    seat_num = request.form.get('seat_num') #OK
+    restaurant = request.form.get('restaurant') #OK
     
     cost = {'悟饕':65, '宜珍':50, '名台':50, '三五':50, '東東香':50, '一起來':45}
     
