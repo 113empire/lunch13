@@ -18,16 +18,27 @@ money_values = ['學號', '座號', '餘額']
 money_sheet.insert_row(money_values, 1)
 
 
-'''
+
 def add_money(school_number, seat_number, how_much):
     global money_sheet
-    i = seat_number + 1
-
-    if money_sheet.cell(i, 1).value==school_number and money_sheet.cell(i, 2).value==seat_number:
-        total = int(money_sheet.cell(i, 3).value)+int(how_much)
-        money_sheet.update_cell(i, 3, total)
-        return total
+    
+    try:
+        cell = money_sheet.find('str(school_number)')
+        r = cell.row
+        c = cell.col
+        if money_sheet.cell(r, c+1).value==seat_number:
+            total = int(money_sheet.cell(r, c+2).value)+int(how_much)
+            money_sheet.update_cell(r, c+2, str(total))
+            return str(total)
         
-    else:
+
+
+    except:
         return False
-'''
+
+
+#扣錢
+
+#訂餐
+
+
