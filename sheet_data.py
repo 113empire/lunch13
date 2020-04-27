@@ -12,11 +12,7 @@ order_sheet = sh.worksheet('order')
 money_sheet = sh.worksheet('money')
 
 # order_values ['日期', '座號', '選購餐廳', '交易金額']
-
-
 # money_values ['學號', '座號', '餘額']
-
-
 
 def add_money(school_number, seat_number, how_much):
     '''
@@ -44,8 +40,13 @@ def add_money(school_number, seat_number, how_much):
     except:
         return False
 
+add_money('811406', '21', '50')
+
 #扣錢
+#def spend_money(school_number, seat_number, how_much):
 
 #訂餐
+#def order_meal(date, school_num, seat_number, restaurant, how_much):
 
 #取得訂單資料
+#def get_order_data(start_index, end_index):
