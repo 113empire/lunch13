@@ -16,6 +16,7 @@ def order():
 def order_process():
     school_num = request.form.get('school_num') #OK
     seat_num = request.form.get('seat_num') #OK
+    date = request.form.get('date')
     restaurant = request.form.get('restaurant') #OK
     
     cost = {'悟饕':65, '宜珍':50, '名台':50, '三五':50, '東東香':50, '一起來':45}
@@ -26,7 +27,7 @@ def order_process():
     if response==False:
         return redirect('/error/money_not_enough/')
     '''
-    return str(school_num) + ' ' + str(seat_num) + ' ' + str(restaurant) + ' ' + str(cost[str(restaurant)])
+    return str(date) + ' ' + str(school_num) + ' ' + str(seat_num) + ' ' + str(restaurant) + ' ' + str(cost[str(restaurant)])
     #return redirect('/order_successful')
     
     #return render_template('order_successful.html', )
