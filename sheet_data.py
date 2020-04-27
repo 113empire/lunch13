@@ -11,11 +11,11 @@ sh = gs.open('lunch13')
 order_sheet = sh.worksheet('order')
 money_sheet = sh.worksheet('money')
 
-order_values = ['日期', '座號', '選購餐廳', '交易金額']
-order_sheet.insert_row(order_values, 1)
+# order_values ['日期', '座號', '選購餐廳', '交易金額']
 
-money_values = ['學號', '座號', '餘額']
-money_sheet.insert_row(money_values, 1)
+
+# money_values ['學號', '座號', '餘額']
+
 
 
 def add_money(school_number, seat_number, how_much):
