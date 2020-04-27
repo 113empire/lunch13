@@ -12,18 +12,21 @@ def index():
 def order():
     return render_template('order.html')
 
-@app.route('/order_process/', methods=['POST'])
+@app.route('/order_process', methods=['POST'])
 def order_process():
     school_num = request.form.get('school_num')
     seat_num = request.form.get('seat_num')
     restaurant = request.form.get('restaurant')
     
-    #response = order_lunch(school_num, restaurant)
+    cost = {'悟饕':65, '宜珍':50, '名台':50, '三五':50, '東東香':50, '一起來':45}
+    
+    #response = order_meal(, school_num, seat_num, restaurant, cost[str(restaurant)])
     
     '''
     if response==False:
         return redirect('/error/money_not_enough/')
     '''
+    return str(school_num) + ' ' + str(seat_num) + ' ' + str(restaurant) + ' ' + str(cost[str(restaurant)])
     #return redirect('/order_successful')
     
     #return render_template('order_successful.html', )
@@ -31,10 +34,6 @@ def order_process():
 @app.route('/order_successful')
 def order_success():
     return render_template('order_successful.html')
-
-@app.route('/order/money_not_enough/')
-def order_money_not_enough():
-    return render_template('money_not_enough.html')
 
 @app.route('/menu')
 def menu():
