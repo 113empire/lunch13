@@ -16,33 +16,32 @@ def order():
 def order_process():
     school_num = request.form.get('school_num') #OK
     seat_num = request.form.get('seat_num') #OK
-    date = request.form.get('date')
+    date = request.form.get('date') #OK
     restaurant = request.form.get('restaurant') #OK
     
     cost = {'悟饕':65, '宜珍':50, '名台':50, '三五':50, '東東香':50, '一起來':45}
     
-    #response = order_meal(, school_num, seat_num, restaurant, cost[str(restaurant)])
+    response = sheet_data.order_meal(date, school_num, seat_num, restaurant, cost[str(restaurant)])
     
-    '''
     if response==False:
-        return redirect('/error/money_not_enough/')
-    '''
+        return redirect('/error/unknown/')
+    elif response=='wrong_number':
+        return redirect('/error/wrong_number/')
+    elif response=='not_enough':
+        return redirect('/error/not_enough/')
+        
     return str(date) + ' ' + str(school_num) + ' ' + str(seat_num) + ' ' + str(restaurant) + ' ' + str(cost[str(restaurant)])
-    #return redirect('/order_successful')
     
-    #return render_template('order_successful.html', )
-
-@app.route('/order_successful')
-def order_success():
-    return render_template('order_successful.html')
+    return render_template('order_successful.html', school_num=response[0], seat_num=response[1], \
+                           date=response[2], restaurant=response[3], how_many=response[4], leave_money=response[5])
 
 @app.route('/menu')
 def menu():
     return render_template('menu.html')
 '''
-@app.route('/management')
-def management():
-    return render_templates('management.html')
+@app.route('/manager_background')
+def manager_background():
+    return render_templates('manager_background.html')
 
 @app.route('/')
 '''
