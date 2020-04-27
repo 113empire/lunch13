@@ -22,9 +22,11 @@ def order_process():
     
     '''
     if response==False:
-        return redirect('/order/money_not_enough/')
+        return redirect('/error/money_not_enough/')
     '''
-    return redirect('/order_successful')
+    #return redirect('/order_successful')
+    
+    #return render_template('order_successful.html', )
 
 @app.route('/order_successful')
 def order_success():
@@ -45,12 +47,17 @@ def management():
 @app.route('/')
 '''
 
+@app.route('/error/<error_type>')
+def error(error_type):
+    return error_type
+
+
 @app.errorhandler(400)
 @app.errorhandler(401)
 @app.errorhandler(403)
 @app.errorhandler(404)
 @app.errorhandler(405)
-def error(error_num):
+def machine_error(error_num):
     return render_template('error.html', error_number='error_num')
 
 
