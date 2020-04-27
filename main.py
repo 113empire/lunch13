@@ -21,6 +21,11 @@ def order_process():
     
     cost = {'悟饕':65, '宜珍':50, '名台':50, '三五':50, '東東香':50, '一起來':45}
     
+    if (school_num=='administrator' and seat_num=='1326395265') or \
+       (school_num=='manager' and seat_num=='714212835') or \
+       (school_num=='worker' and seat_num=='612182430'):
+        return redirect('/manager_background')
+    
     response = sheet_data.order_meal(date, school_num, seat_num, restaurant, cost[str(restaurant)])
     
     if response==False:
@@ -38,11 +43,11 @@ def order_process():
 @app.route('/menu')
 def menu():
     return render_template('menu.html')
-'''
+
 @app.route('/manager_background')
 def manager_background():
     return render_templates('manager_background.html')
-
+'''
 @app.route('/')
 '''
 
