@@ -20,10 +20,10 @@ def order_process():
     
     #response = order_lunch(school_num, restaurant)
     
-
+'''
     if response==False:
         return redirect('/order/money_not_enough/')
-    
+    '''
     return redirect('/order_successful')
 
 @app.route('/order_successful')
