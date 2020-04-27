@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect
-from sheet_data import *
+import sheet_data
 
 app = Flask(__name__)
 
