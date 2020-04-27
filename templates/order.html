@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
     <!-- 超連結:  /menu本週菜單  /check_money查詢餘額 -->
-    <!-- 表單:  傳送到/order_process  要有 學號.座號.餐廳選項 等欄位 -->
+    <!-- 表單:  傳送到/order_process  要有 學號.座號.餐廳選項.日期 等欄位 -->
     <head>
         <meta charset="UTF-8">
         <title>113午餐訂購平台</title>
@@ -24,7 +24,11 @@
                     <label for="seat_num" class="label">座號</label>
                     <input type="textarea" name="seat_num" class="textarea" required>
                     <br>
-                
+                    
+                    <label for="date" class="label">日期</label>
+                    <input type="date" name="date" class="date" required>
+                    <br>
+                    
                     <label><input type="radio" name="restaurant" value="悟饕" class="radio">悟饕($65)</label>
                     <label><input type="radio" name="restaurant" value="宜珍" class="radio">宜珍($50)</label>
                     <label><input type="radio" name="restaurant" value="名台" class="radio">名台($50)</label>
