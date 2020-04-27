@@ -34,6 +34,7 @@ a:hover {
 .title {
 	font-size: 30px;
 	text-align: center;
+	color: #ffa000;
 }
 
 .enter-area {
@@ -44,6 +45,7 @@ a:hover {
 	background-color: PaleGreen;
 	margin: 0 auto;
 	padding: 30px;
+	color: #d0c000;
 	/*text-align: center;*/
 }
 
