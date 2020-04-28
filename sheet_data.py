@@ -137,8 +137,8 @@ def order_meal(date, school_number, seat_number, restaurant, how_much):
             
             if money_sheet.cell(r, c+1).value==str(seat_number): #如果學號的右邊一格等於座號
                 #以上OK
-                leave_money = spend_money(schoool_number, seat_number, how_much)
-                return 'c_ok'#
+                #leave_money = spend_money(schoool_number, seat_number, how_much)
+                #return 'c_ok'#
                 values = [date, seat_number, reataurant, str(how_much)]
                 order_sheet.insert_row(values, 2)
                 return 'd_ok'#
