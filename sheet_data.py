@@ -129,7 +129,7 @@ def order_meal(date, school_number, seat_number, restaurant, how_much):
     global order_sheet
     global money_sheet
 
-    #try:
+    try:
         if check_money(school_number, seat_number, how_much)==True:
             cell = money_sheet.find(str(school_number)) #尋找學號
             r = cell.row #學號的列(橫)
@@ -153,8 +153,8 @@ def order_meal(date, school_number, seat_number, restaurant, how_much):
         else:
             return False
         
-    #except:
-        return False
+    except:
+        return 'hahaha'
 
 #取得訂單資料
 #def get_order_data(start_index, end_index):
