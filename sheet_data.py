@@ -134,13 +134,13 @@ def order_meal(date, school_number, seat_number, restaurant, how_much):
             cell = money_sheet.find(str(school_number)) #尋找學號
             r = cell.row #學號的列(橫)
             c = cell.col #學號的欄(直)
-            return 'a_ok'#
+            
             if money_sheet.cell(r, c+1).value==str(seat_number): #如果學號的右邊一格等於座號
                 leave_money = spend_money(schoool_number, seat_number, how_much)
                 
                 values = [date, seat_number, reataurant, str(how_much)]
                 order_sheet.insert_row(values, 2)
-                
+                return 'b_ok'#
                 wday = '?'
                 return [school_number, seat_number, '{date[:5]}年{date[5:7]}月{7:}日 星期{wday}', restaurant, how_much, leave_money]
             
