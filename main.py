@@ -21,14 +21,14 @@ def order_process():
     
     cost = {'悟饕':65, '宜珍':50, '名台':50, '三五':50, '東東香':50, '一起來':45}
     login = (('administrator', '1326395265'), ('manager', '714212835'), ('worker', '612182430'))
-   
-    #以上OK
 
     if (school_num, seat_num) in login:
         return redirect('/manager_background')
-    return str(date) + ' ' + str(school_num) + ' ' + str(seat_num) + ' ' + str(restaurant) + ' ' + str(cost[str(restaurant)])#
+    
+    #以上OK
     
     response = sheet_data.order_meal(date, school_num, seat_num, restaurant, cost[str(restaurant)])
+    return str(response)
     
     if response==False:
         return redirect('/error/unknown/')
