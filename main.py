@@ -26,7 +26,7 @@ def order_process():
 
     if (school_num, seat_num) in login:
         return redirect('/manager_background')
-    
+    return str(date) + ' ' + str(school_num) + ' ' + str(seat_num) + ' ' + str(restaurant) + ' ' + str(cost[str(restaurant)])#
     
     response = sheet_data.order_meal(date, school_num, seat_num, restaurant, cost[str(restaurant)])
     
