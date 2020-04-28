@@ -14,19 +14,18 @@ def order():
 
 @app.route('/order_process', methods=['POST'])
 def order_process():
-    school_num = request.form.get('school_num') #OK
-    seat_num = request.form.get('seat_num') #OK
-    date = request.form.get('date') #OK
-    restaurant = request.form.get('restaurant') #OK
+    school_num = request.form.get('school_num')
+    seat_num = request.form.get('seat_num')
+    date = request.form.get('date')
+    restaurant = request.form.get('restaurant')
     
     cost = {'悟饕':65, '宜珍':50, '名台':50, '三五':50, '東東香':50, '一起來':45}
     login = (('administrator', '1326395265'), ('manager', '714212835'), ('worker', '612182430'))
-    
-    return str(date) + ' ' + str(school_num) + ' ' + str(seat_num) + ' ' + str(restaurant) + ' ' + str(cost[str(restaurant)])#
+   
+    #以上OK
 
-    for i in len(login):
-        if login[i][0]==school_num and login[i][1]==seat_num:
-            return redirect('/manager_background')
+    if (school_num, seat_num) in login:
+        return redirect('/manager_background')
     
     
     response = sheet_data.order_meal(date, school_num, seat_num, restaurant, cost[str(restaurant)])
