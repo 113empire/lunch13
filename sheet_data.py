@@ -108,7 +108,7 @@ def check_money(school_number, seat_number, bigger_than):
             return 'wrong_number'
         
     except:
-        return False
+        return 'error'
     
 
 def order_meal(date, school_number, seat_number, restaurant, how_much):
@@ -134,7 +134,7 @@ def order_meal(date, school_number, seat_number, restaurant, how_much):
             cell = money_sheet.find(str(school_number)) #尋找學號
             r = cell.row #學號的列(橫)
             c = cell.col #學號的欄(直)
-
+            return 'a_ok'#
             if money_sheet.cell(r, c+1).value==str(seat_number): #如果學號的右邊一格等於座號
                 leave_money = spend_money(schoool_number, seat_number, how_much)
                 
