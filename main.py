@@ -27,7 +27,7 @@ def order_process():
     
     #以上OK
     sheet_data.add_money(school_num, seat_num, '50')
-    sheet_data.spend_money(school_num, seat_num, '50')
+    sheet_data.spend_money(school_num, seat_num, '49')
     return 'temp'
     return str(sheet_data.check_money(school_num, seat_num, '50')) #
     
