@@ -99,7 +99,7 @@ def spend_money(school_number, seat_number, how_much):
         r = cell.row #學號的列(橫)
         c = cell.col #學號的欄(直)
 
-        if check_money(school_number, seat_number, how_much)==True: #如果學號的右邊一格等於座號
+        if check_money(school_number, seat_number, how_much)==True: #如果學號的右邊一格等於座號且餘額足夠
             total = int(money_sheet.cell(r, c+2).value)-int(how_much) #把學號的右邊2格(原本的餘額)減去扣除金額
             money_sheet.update_cell(r, c+2, str(total)) #更新學號右邊2格(餘額)
             return str(total)
@@ -110,6 +110,33 @@ def spend_money(school_number, seat_number, how_much):
     except:
         return 'error'
     
+
+def order_meal(date, school_number, seat_number, restaurant, how_much):
+    '''
+    預定便當
+    輸入值：
+      date：日期，格式為YYYYMMDD
+      school_number：學號
+      seat_number：座號
+      restaurant：便當種類(預定商家)
+      how_much：便當售價
+    回傳值：
+      False：錯誤，可能是找不到
+      'wrong_number'：學號座號不符
+      'not_enough'：餘額不足
+      其他：清單，學號、座號、日期、便當種類、便當售價、扣除後總金額
+    '''
+    global order_sheet
+    global money_sheet
+    
+    state = spend_money(school_number, seat_number, how_much)
+    if state!='error' and state!='wrong_number': #扣款成功
+        values = [date, seat_number, restaurant, how_much]
+        order_sheet.insert_row(values, 2)
+        return [date, school_number, seat_number, restaurant, how_much, state]
+        
+    else:
+        return state
 """
 def order_meal(date, school_number, seat_number, restaurant, how_much):
     '''
