@@ -27,7 +27,6 @@ def order_process():
     
     #以上OK
     #sheet_data.add_money(school_num, seat_num, '50')
-    return 
     return str(sheet_data.check_money(school_num, seat_num, '50')) #
     
     response = sheet_data.order_meal(date, school_num, seat_num, restaurant, cost[str(restaurant)])
