@@ -110,7 +110,7 @@ def spend_money(school_number, seat_number, how_much):
     except:
         return 'error'
     
-
+"""
 def order_meal(date, school_number, seat_number, restaurant, how_much):
     '''
     預定便當
@@ -156,6 +156,6 @@ def order_meal(date, school_number, seat_number, restaurant, how_much):
         
     except:
         return 'hahaha'
-
+"""
 #取得訂單資料
 #def get_order_data(start_index, end_index):
