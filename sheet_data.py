@@ -27,7 +27,7 @@ def add_money(school_number, seat_number, how_much):
       how_much：增加的金額
     回傳值：
       'wrong_number'：學號座號不符
-      False：錯誤，可能是找不到
+      'error'：錯誤，可能是找不到
       其他：字串，增加後總金額
     '''
     global money_sheet
@@ -37,16 +37,16 @@ def add_money(school_number, seat_number, how_much):
         r = cell.row #學號的列(橫)
         c = cell.col #學號的欄(直)
 
-        if money_sheet.cell(r, c+1).value==str(seat_number): #如果學號的右邊一格等於座號
+        if check_money(school_number, seat_number, how_much)==True or check_money(school_number, seat_number, how_much)==False: #如果學號的右邊一格等於座號
             total = int(money_sheet.cell(r, c+2).value)+int(how_much) #把學號的右邊2格(原本的餘額)加上增加金額
             money_sheet.update_cell(r, c+2, str(total)) #更新學號右邊2格(餘額)
             return str(total)
         
         else:
-            return 'wrong_number'
+            return check_money(school_number, seat_number, how_much)
         
     except:
-        return False
+        return 'error'
 
 
 def spend_money(school_number, seat_number, how_much):
