@@ -26,10 +26,8 @@ def order_process():
         return redirect('/manager_background')
     
     #以上OK
-    sheet_data.add_money(school_num, seat_num, '50')
-    sheet_data.spend_money(school_num, seat_num, '49')
-    return 'temp'
-    return str(sheet_data.check_money(school_num, seat_num, '50')) #
+    
+    
     
     response = sheet_data.order_meal(date, school_num, seat_num, restaurant, cost[str(restaurant)])
     return str(response)
