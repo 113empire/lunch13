@@ -50,7 +50,7 @@ def menu():
 
 @app.route('/manager_background')
 def manager_background():
-    return render_templates('manager_background.html')
+    return render_template('manager_background.html')
 '''
 @app.route('/')
 '''
