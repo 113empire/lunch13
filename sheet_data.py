@@ -90,6 +90,7 @@ def spend_money(school_number, seat_number, how_much):
     回傳值：
       'wrong_number'：學號座號不符
       'error'：錯誤，可能是找不到
+      'not_enough'：餘額不足
       其他：字串，扣除後總金額
     '''
     global money_sheet
@@ -104,6 +105,8 @@ def spend_money(school_number, seat_number, how_much):
             money_sheet.update_cell(r, c+2, str(total)) #更新學號右邊2格(餘額)
             return str(total)
         
+        elif check_money(school_number, seat_number, how_much)==False:
+            return 'not_enough'
         else:
             return check_money(school_number, seat_number, how_much)
         
