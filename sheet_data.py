@@ -124,22 +124,33 @@ def order_meal(date, school_number, seat_number, restaurant, how_much):
       restaurant：便當種類(預定商家)
       how_much：便當售價
     回傳值：
-      False：錯誤，可能是找不到
+      'error'：錯誤，可能是找不到
       'wrong_number'：學號座號不符
       'not_enough'：餘額不足
       其他：清單，學號、座號、日期、便當種類、便當售價、扣除後總金額
     '''
     global order_sheet
     global money_sheet
-    
-    state = spend_money(school_number, seat_number, how_much)
-    if state!='error' and state!='wrong_number': #扣款成功
-        values = [date, seat_number, restaurant, how_much]
-        order_sheet.insert_row(values, 2)
-        return [date, school_number, seat_number, restaurant, how_much, state]
+    try:
+             
+        state = spend_money(school_number, seat_number, how_much)
+        '''
+        if state!='error' and state!='wrong_number': #扣款成功
+            values = [date, seat_number, restaurant, how_much]
+            order_sheet.insert_row(values, 2)
+            return [date, school_number, seat_number, restaurant, how_much, state]
+        '''
+        if state=='error' or state=='wrong_number' or state=='not_enough':
+            return state
         
-    else:
-        return state
+        else:
+            values = [date, seat_number, restaurant, how_much]
+            order_sheet.insert_row(values, 2)
+            
+            return [date, school_number, seat_number, restaurant, how_much, state]
+        
+    except:
+        return 'error'
 """
 def order_meal(date, school_number, seat_number, restaurant, how_much):
     '''
