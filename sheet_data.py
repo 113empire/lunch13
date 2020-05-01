@@ -147,6 +147,9 @@ def order_meal(date, school_number, seat_number, restaurant, how_much):
             values = [date, seat_number, restaurant, how_much]
             order_sheet.insert_row(values, 2)
             
+            length = int(order_sheet.cell(2, 6).value)+1 #資料數量+1
+            order_sheet.update_cell(2, 6, str(length))
+         
             return [date, school_number, seat_number, restaurant, how_much, state]
         
     except:
