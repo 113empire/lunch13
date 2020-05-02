@@ -154,52 +154,7 @@ def order_meal(date, school_number, seat_number, restaurant, how_much):
         
     except:
         return 'error'
-"""
-def order_meal(date, school_number, seat_number, restaurant, how_much):
-    '''
-    預定便當
-    輸入值：
-      date：日期，格式為YYYYMMDD
-      school_number：學號
-      seat_number：座號
-      restaurant：便當種類(預定商家)
-      how_much：便當售價
-    回傳值：
-      False：錯誤，可能是找不到
-      'wrong_number'：學號座號不符
-      'not_enough'：餘額不足
-      其他：清單，學號、座號、日期、便當種類、便當售價、扣除後總金額
-    '''
-    global order_sheet
-    global money_sheet
 
-    try:
-        if check_money(school_number, seat_number, how_much)==True:
-            cell = money_sheet.find(str(school_number)) #尋找學號
-            r = cell.row #學號的列(橫)
-            c = cell.col #學號的欄(直)
-            
-            if money_sheet.cell(r, c+1).value==str(seat_number): #如果學號的右邊一格等於座號
-                #以上OK
-                #leave_money = spend_money(schoool_number, seat_number, how_much)
-                #return 'c_ok'#
-                values = [date, seat_number, reataurant, str(how_much)]
-                order_sheet.insert_row(values, 2)
-                return 'd_ok'#
-                wday = '?'
-                return [school_number, seat_number, '{date[:5]}年{date[5:7]}月{7:}日 星期{wday}', restaurant, how_much, leave_money]
-            
-        elif check_money(school_number, seat_number, how_much)==False:
-            return 'not_enough'
-        
-        elif check_money(school_number, seat_number, how_much)=='wrong_number':
-            return 'wrong_number'
-        
-        else:
-            return False
-        
-    except:
-        return 'hahaha'
-"""
+    
 #取得訂單資料
 #def get_order_data(start_index, end_index):
