@@ -2,7 +2,7 @@
 <html lang="zh-Hant-TW">
     <!-- 超連結:  /回首頁 -->
     <!-- 樣板:  日期{{ date }}  學號{{ school_num }}  座號{{ seat_num }}  
-               種類{{ restaurant }}  交易金額/價格{{ how_many }}  餘額{{ leave_money }}-->
+               種類{{ restaurant }}  交易金額/價格{{ how_much }}  餘額{{ leave_money }}-->
     <head>
         <meta charset="UTF-8">
         <title>113午餐訂購平台</title>
@@ -18,10 +18,14 @@
         <main>
             <div class="message-area">
                 <p class="text">
-                    日期：{{ date }}
+                    日期：{{ date }} 
+                    <br>
                     座號：{{ seat_num }}
+                    <br>
                     便當種類：{{ restaurant }}
+                    <br>
                     交易金額：{{ how_much }}
+                    <br>
                     存款餘額：{{ leave_money }}
                 </p>
                 
