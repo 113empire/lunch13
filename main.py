@@ -30,7 +30,7 @@ def order_process():
     
     
     response = sheet_data.order_meal(date, school_num, seat_num, restaurant, cost[str(restaurant)])
-    return str(response)
+    
     
     if response=='error':
         return redirect('/error/unknown/')
@@ -39,10 +39,10 @@ def order_process():
     elif response=='not_enough':
         return redirect('/error/not_enough/')
         
-    return str(date) + ' ' + str(school_num) + ' ' + str(seat_num) + ' ' + str(restaurant) + ' ' + str(cost[str(restaurant)])
+    return str(response)
     
-    return render_template('order_successful.html', school_num=response[0], seat_num=response[1], \
-                           date=response[2], restaurant=response[3], how_many=response[4], leave_money=response[5])
+    return render_template('order_successful.html', school_num=response[1], seat_num=response[2], \
+                           date=response[0], restaurant=response[3], how_many=response[4], leave_money=response[5])
 
 @app.route('/menu')
 def menu():
