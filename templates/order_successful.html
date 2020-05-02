@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
     <!-- 超連結:  /回首頁 -->
-    <!-- 樣板:  剩餘金額{{ money }} -->
+    <!-- 樣板:  日期{{ date }}  學號{{ school_num }}  座號{{ seat_num }}  
+               種類{{ restaurant }}  交易金額/價格{{ how_many }}  餘額{{ leave_money }}-->
     <head>
         <meta charset="UTF-8">
         <title>113午餐訂購平台</title>
@@ -16,8 +17,17 @@
         
         <main>
             <div class="message-area">
-                <p class="text">餘額剩下 <b>${{ how_much_money }}</b> 元</p>
-                <!-- <p class="text">您的新驗證碼： <b>{{ auth_code }}</b><br>敬請妥善保存，否則<b>無法進行訂購</b></p> -->
+                <p class="text">
+                    日期：{{ date }}
+                    座號：{{ seat_num }}
+                    便種類：{{ restaurant }}
+                    交易金額：{{ how_much }}
+                    存款餘額：{{ leave_money }}
+                </p>
+                <p class="text">
+                    目前尚未設
+                </p>
+                
                 
                 <p class="a-text"><a href="/">回到首頁</a></p>
                 
