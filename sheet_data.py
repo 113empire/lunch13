@@ -158,3 +158,6 @@ def order_meal(date, school_number, seat_number, restaurant, how_much):
     
 #取得訂單資料
 #def get_order_data(start_index, end_index):
+
+#取得個人交易紀錄
+#def get_personal_order_data(school_number, seat_number, start_date):
