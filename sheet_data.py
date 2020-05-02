@@ -127,7 +127,7 @@ def order_meal(date, school_number, seat_number, restaurant, how_much):
       'error'：錯誤，可能是找不到
       'wrong_number'：學號座號不符
       'not_enough'：餘額不足
-      其他：清單，學號、座號、日期、便當種類、便當售價、扣除後總金額
+      其他：清單，日期、學號、座號、便當種類、便當售價、扣除後總金額
     '''
     global order_sheet
     global money_sheet
