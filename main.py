@@ -52,11 +52,38 @@ def menu():
 def manager_background():
     return render_template('manager_background.html')
 '''
-@app.route('/')
+@app.route('/add_money')
+def add_money_page():
+
+@app.route('/add_money_process')
+
+@app.route('/all_order')
+
+@app.route('/update_menu')
+
+@app.route('/menu_process')
+
+@app.route('/check_money')
+def check_money_page():
+
+@app.route('/check_money_result')
+
+@app.route('/check_personal_order')
+
+@app.route('/check_personal_order_result')
 '''
 
 @app.route('/error/<error_type>')
 def error(error_type):
+    '''
+    if error_type=='unknown':
+        return render_template('error_machine.html')
+    elif error_type=='wrong_number':
+        
+    elif error_type=='not_enough':
+    
+    else:
+    '''
     return error_type
 
 
