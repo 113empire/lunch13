@@ -19,7 +19,7 @@ def order_process():
     date = request.form.get('date')
     restaurant = request.form.get('restaurant')
     
-    cost = {'悟饕':65, '宜珍':50, '名台':50, '三五':50, '東東香':50, '一起來':45}
+    cost = {'悟饕':65, '宜珍':50, '名台':50, '三五':50, '素食':50, '東東香':50, '一起來':45}
     login = (('administrator', '1326395265'), ('manager', '714212835'), ('worker', '612182430'))
 
     if (school_num, seat_num) in login:
@@ -32,7 +32,7 @@ def order_process():
     response = sheet_data.order_meal(date, school_num, seat_num, restaurant, cost[str(restaurant)])
     return str(response)
     
-    if response==False:
+    if response=='error':
         return redirect('/error/unknown/')
     elif response=='wrong_number':
         return redirect('/error/wrong_number/')
