@@ -35,7 +35,7 @@ def order_process():
         return redirect('/error/not_enough/')
         
     return render_template('order_successful.html', date=response[0], seat_num=response[2], \
-                           restaurant=response[3], how_many=response[4], leave_money=response[5])
+                           restaurant=response[3], how_much=response[4], leave_money=response[5])
 
 @app.route('/menu')
 def menu():
