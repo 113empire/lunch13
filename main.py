@@ -25,12 +25,7 @@ def order_process():
     if (school_num, seat_num) in login:
         return redirect('/manager_background')
     
-    #以上OK
-    
-    
-    
     response = sheet_data.order_meal(date, school_num, seat_num, restaurant, cost[str(restaurant)])
-    
     
     if response=='error':
         return redirect('/error/unknown/')
@@ -39,10 +34,8 @@ def order_process():
     elif response=='not_enough':
         return redirect('/error/not_enough/')
         
-    return str(response)
-    
-    return render_template('order_successful.html', school_num=response[1], seat_num=response[2], \
-                           date=response[0], restaurant=response[3], how_many=response[4], leave_money=response[5])
+    return render_template('order_successful.html', date=response[0], seat_num=response[2], \
+                           restaurant=response[3], how_many=response[4], leave_money=response[5])
 
 @app.route('/menu')
 def menu():
@@ -51,26 +44,58 @@ def menu():
 @app.route('/manager_background')
 def manager_background():
     return render_template('manager_background.html')
-'''
+
 @app.route('/add_money')
 def add_money_page():
+    return render_template('add_money.html')
 
-@app.route('/add_money_process')
+@app.route('/add_money_process', methods=['POST'])
+def add_money_process():
+    school_num = request.form.get('school_num')
+    seat_num = request.form.get('seat_num')
+    how_much = request.form.get('how_much')
+    
+    response = sheet_data.add_money(school_num, seat_num, how_much)
+    
+    if response=='error':
+        return redirect('/error/unknown/')
+    elif response=='wrong_number':
+        return redirect('/error/wrong_number/')
+        
+    return render_template('add_money.html', school_num=school_num, seat_num=seat_num, how_much=how_much, leave_money=response)
 
+'''
 @app.route('/all_order')
+def all_order():
+    return render_template('all_order.html')
+'''
 
 @app.route('/update_menu')
+def update_menu_page():
+    return render_template('update_menu.html')
 
-@app.route('/menu_process')
+'''
+@app.route('/menu_process', methods=['POST'])
+def menu_process():
+    
+'''
 
 @app.route('/check_money')
 def check_money_page():
+    return render_template('check_money.html')
 
-@app.route('/check_money_result')
+'''
+@app.route('/check_money_result', methods=['POST'])
+def check_money_result():
+    
 
 @app.route('/check_personal_order')
+def check_personal_order():
+    return render_template('check_personal_order.html')
 
-@app.route('/check_personal_order_result')
+@app.route('/check_personal_order_result', methods=['POST'])
+def check_personal_order_result():
+    
 '''
 
 @app.route('/error/<error_type>')
@@ -78,11 +103,15 @@ def error(error_type):
     '''
     if error_type=='unknown':
         return render_template('error_machine.html')
+        
     elif error_type=='wrong_number':
+        return render_template('error_wrong_number.html')
         
     elif error_type=='not_enough':
-    
-    else:
+        return render_template('error_money.html', )
+        
+    elif error_type=='too_much_money':
+        return render_template('error_money.html', )
     '''
     return error_type
 
