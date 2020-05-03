@@ -115,7 +115,7 @@ def error(error_type):
     '''
     return error_type
 
-
+'''
 @app.errorhandler(400)
 @app.errorhandler(401)
 @app.errorhandler(403)
@@ -123,7 +123,7 @@ def error(error_type):
 @app.errorhandler(405)
 def machine_error(error_num):
     return render_template('error.html', error_number=error_num)
-
+'''
 
 if __name__=='__main__':
     app.run()
