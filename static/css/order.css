@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 body {
-	font-family: 'Noto Sans TC', sans-serif;
+	font-family: "微軟正黑體", "細明體", sans-serif;
 	background-color: LightCyan;
 }
 
@@ -103,3 +103,25 @@ a:hover {
 	text-align: center;
 }
 
+/* RWD響應式設計 */
+@media (max-width: 600px) {
+	/*
+	header {
+		background-position: 32% 50%;
+		border-top: #20567d 5px solid;
+	}
+	.header-contents {
+		min-height: 60px;
+		background-size: 40px 40px;
+		background-position: 10px 50%;
+	}
+	.header-contents h1{
+		padding: 15px 0 5px 55px;
+		font-size: 16px;
+	}
+	.header-contents h2{
+		padding: 0 0 0 55px;
+		font-size: 12px;
+	}
+	*/
+}
