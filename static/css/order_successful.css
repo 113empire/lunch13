@@ -32,13 +32,13 @@ a:hover {
 }
 
 .message-area {
-	width: 350px;
-	height: 300px;
+	width: 300px;
+	height: 270px;
 	border: 0 solid white;
 	border-radius: 20px;
 	background-color: PaleGreen;
 	margin: 0 auto;
-	padding: 30px;
+	padding: 20px;
 }
 
 .text {
@@ -50,7 +50,7 @@ a:hover {
 
 
 .a-text {
-	margin: 10px 130px;
+	margin: 10px 20px;
 	padding: 10px 130px;
 	font-size: 14px;
 	line-height: 1.5;
