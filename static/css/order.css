@@ -3,6 +3,7 @@
 body {
 	font-family: "微軟正黑體", "細明體", sans-serif;
 	background-color: LightCyan;
+	margin: 20px;
 }
 
 *, *::before, *::after {
@@ -22,7 +23,7 @@ a:hover {
 .header {
 	height: 80px;
 	width: 100%;
-	padding: 15px;
+	padding: 20px;
 	text-align: center;
 }
 /*
@@ -36,18 +37,18 @@ a:hover {
 	text-align: center;
 	color: #ffa000;
 }
-/*
+
 .enter-area {
 	width: 350px;
-	height: 450px;
-	border: 0 solid white;
+	height: 600px;
+	/*border: 0 solid white;
 	border-radius: 20px;
-	background-color: PaleGreen;
+	background-color: PaleGreen;*/
 	margin: 0 auto;
-	padding: 30px;
+	padding: 20px;
 	color: #d0c000;
 }
-*/
+
 .label {
 	margin: 10px 2px 10px auto;
 	height: 25px;
