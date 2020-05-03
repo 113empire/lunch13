@@ -21,15 +21,15 @@
         <main>
             <div class="message-area">
                 <p class="text">
-                    日期：{{ date }} 
+                    日期：{{ date[0:4] }}年{{ date[5:7] }}月{{ date[8:] }}日
                     <br>
                     座號：{{ seat_num }}
                     <br>
                     便當種類：{{ restaurant }}
                     <br>
-                    交易金額：{{ how_much }}
+                    交易金額：{{ how_much }}元
                     <br>
-                    存款餘額：{{ leave_money }}
+                    存款餘額：{{ leave_money }}元
                 </p>
                 
                 <p class="text">
