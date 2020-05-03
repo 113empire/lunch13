@@ -40,7 +40,7 @@ a:hover {
 
 .enter-area {
 	width: 340px;
-	height: 550px;
+	height: 600px;
 	/*border: 0 solid white;
 	border-radius: 20px;
 	background-color: PaleGreen;*/
@@ -56,18 +56,18 @@ a:hover {
 }
 
 .restaurant-type {
-	height: 320px;
+	height: 330px;
 }
 
 .textarea {
 	margin: 10px auto 10px 2px;
-	width: 210px;
+	width: 220px;
 	height: 25px;
 }
 
 .date {
 	margin: 10px auto 10px 2px;
-	width: 210px;
+	width: 220px;
 	height: 25px;
 }
 
