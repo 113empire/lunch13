@@ -44,9 +44,10 @@ a:hover {
 .text {
 	font-size: 18px;
 	line-height: 1.5;
-	letter-spacing: 1px;
+	letter-spacing: 2px;
+	margin: 6px 0;
 }
-}
+
 
 .a-text {
 	margin: 10px 130px;
