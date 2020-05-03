@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+body {
+	font-family: 'Noto Sans TC', sans-serif;
+	background-color: LightCyan;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+a:link, a:visited, a:hover, a:active {
+	color: Blue;
+	text-decoration: none;
+	transition: 0.15s;
+}
+
+a:hover {
+	color: #64ccff;
+}
+
+.header {
+	height: 80px;
+	width: 100%;
+	padding: 15px;
+	text-align: center;
+}
+
+.title {
+	font-size: 30px;
+	text-align: center;
+}
+/*
+.enter-area {
+	width: 350px;
+	height: 450px;
+	border: 0 solid white;
+	border-radius: 20px;
+	background-color: PaleGreen;
+	margin: 0 auto;
+	padding: 30px;
+}
+*/
+.hint-text {
+	margin: 10px;
+	font-size: 14px;
+	line-height: 1.5;
+	letter-spacing: 1px;
+}
+
+.footer {
+	height: 200px;
+	width: 100%;
+	padding: 20px;
+	text-align: center;
+}
+
