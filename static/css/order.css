@@ -28,26 +28,27 @@ a:hover {
 	text-align: center;
 }
 @keyframes example {
-	/*
+	
 	0%   {transform: scale(3, 3); transform: rotate(15deg);}
  	25%  {transform: scale(1, 1); transform: rotate(15deg);}
 	50%  {transform: scale(3, 3); transform: rotate(15deg);}
 	75%  {transform: scale(1, 1); transform: rotate(15deg);}
 	100% {transform: scale(3, 3); transform: rotate(15deg);}
-	
+	/*
 	0%   {scale(3, 3);rotate(15deg);}
  	25%  {scale(1, 1);rotate(15deg);}
 	50%  {scale(3, 3);rotate(15deg);}
 	75%  {scale(1, 1);rotate(15deg);}
 	100% {scale(3, 3);rotate(15deg);}
-	*/
+	
 	0%   {transform: scale(3, 3);}
  	25%  {transform: scale(1, 1);}
 	50%  {transform: scale(3, 3);}
 	75%  {transform: scale(1, 1);}
-	100% {transform: scale(3, 3);}
+	100% {transform: scale(3, 3);}*/
 }
 .lunchtime {
+	fontsize: 28px;
 	height: 100px;
 	width: 100%;
 	padding: 20px;
