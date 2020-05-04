@@ -21,7 +21,10 @@ def order_process():
     
     cost = {'悟饕':65, '宜珍':50, '名台':50, '三五':50, '素食':50, '東東香':50, '一起來':45}
     login = (('administrator', '1326395265'), ('manager', '714212835'), ('worker', '612182430'))
-
+    
+    if restaurant==None:
+        return redirect('/error/no_restaurant')
+    
     if (school_num, seat_num) in login:
         return redirect('/manager_background')
     
@@ -112,6 +115,9 @@ def error(error_type):
         
     elif error_type=='too_much_money':
         return render_template('error_money.html', )
+        
+    elif error_type=='no_restaurant':
+        return render_templates('error_no_restaurant.html', )
     '''
     return error_type
 
