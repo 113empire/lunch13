@@ -42,15 +42,15 @@ a:hover {
 	100% {scale(3, 3);rotate(15deg);}
 	*/
 	0%   {transform: rotate(15deg);}
-	1%   {transform: scale(2, 2);}
+	12.5%   {transform: scale(2, 2);}
  	25%  {transform: rotate(0deg);}
-	26%  {transform: scale(1, 1);}
+	37.5%  {transform: scale(1, 1);}
 	50%  {transform: rotate(-15deg);}
-	51%  {transform: scale(2, 2);}
+	62.5%  {transform: scale(2, 2);}
 	75%  {transform: rotate(0deg);}
-	76%  {transform: scale(1, 1);}
-	99% {transform: rotate(15deg);}
-	100% {transform: scale(2, 2);}
+	87.5%  {transform: scale(1, 1);}
+	100% {transform: rotate(15deg);}
+	112.5% {transform: scale(2, 2);}
 }
 .lunchtime {
 	fontsize: 28px;
