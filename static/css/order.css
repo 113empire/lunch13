@@ -40,7 +40,7 @@ a:hover {
 	padding: 20px;
 	text-align: center;
 	color: #dddd00;
-	transform: rotate(15deg);
+	transform: rotate(-15deg);
 	animation-name: example;
   	animation-duration: 1s;
 	
