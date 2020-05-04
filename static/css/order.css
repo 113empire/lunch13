@@ -58,7 +58,7 @@ a:hover {
 	transform: rotate(15deg);
 	animation-name: example;
   	animation-duration: 1s;
-	animation-iteration-count: infinite;
+	/*animation-iteration-count: infinite;*/
 }
 /*
 .logo {
