@@ -38,10 +38,11 @@ a:hover {
 	width: 100%;
 	padding: 20px;
 	text-align: center;
+	color: #ffffff
 	transform: rotate(15deg);
 	animation-name: example;
   	animation-duration: 0.5s;
-	color: #ffffff
+	
 }
 /*
 .logo {
