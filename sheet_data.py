@@ -144,7 +144,7 @@ def order_meal(date, school_number, seat_number, restaurant, how_much):
             return state
         
         else:
-            values = [date, seat_number, restaurant, how_much]
+            values = [date, seat_number, restaurant, how_much, state]
             order_sheet.insert_row(values, 2)
          
             data_length = int(order_sheet.cell(1, 6).value) + 1
