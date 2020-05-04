@@ -28,18 +28,18 @@ a:hover {
 	text-align: center;
 }
 @keyframes example {
-	0%   {transform: scale(2, 3);transform: rotate(15deg);}
+	0%   {transform: scale(3, 3);transform: rotate(15deg);}
  	25%  {transform: scale(1, 1);transform: rotate(15deg);}
-	50%  {transform: scale(2, 3);transform: rotate(15deg);}
+	50%  {transform: scale(3, 3);transform: rotate(15deg);}
 	75%  {transform: scale(1, 1);transform: rotate(15deg);}
-	100% {transform: scale(2, 3);transform: rotate(15deg);}
+	100% {transform: scale(3, 3);transform: rotate(15deg);}
 }
 .lunchtime {
-	height: 60px;
+	height: 100px;
 	width: 100%;
 	padding: 20px;
 	text-align: center;
-	color: #ffff00;
+	color: #dddd00;
 	transform: rotate(15deg);
 	animation-name: example;
   	animation-duration: 1s;
