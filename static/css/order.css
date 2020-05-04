@@ -41,11 +41,11 @@ a:hover {
 	75%  {scale(1, 1);rotate(15deg);}
 	100% {scale(3, 3);rotate(15deg);}
 	*/
-	0%   {transform: scale(3, 3);}
+	0%   {transform: scale(3, 3);rotate(15deg);}
  	25%  {transform: scale(1, 1);}
-	50%  {transform: scale(3, 3);}
+	50%  {transform: scale(3, 3);rotate(15deg);}
 	75%  {transform: scale(1, 1);}
-	100% {transform: scale(3, 3);}
+	100% {transform: scale(3, 3);rotate(15deg);}
 }
 .lunchtime {
 	fontsize: 28px;
