@@ -17,7 +17,8 @@ a:link, a:visited, a:hover, a:active {
 }
 
 a:hover {
-	color: #64ccff;
+	/*color: #64ccff;*/
+	color: #326677;
 }
 
 .header {
@@ -25,6 +26,22 @@ a:hover {
 	width: 100%;
 	padding: 20px;
 	text-align: center;
+}
+@keyframes example {
+  0%   {transform: scale(2, 3);}
+  
+  50%  {transform: scale(1, 1);}
+  
+}
+.lunchtime {
+	height: 60px;
+	width: 100%;
+	padding: 20px;
+	text-align: center;
+	transform: rotate(15deg);
+	animation-name: example;
+  	animation-duration: 0.5s;
+	color: #ffffff
 }
 /*
 .logo {
