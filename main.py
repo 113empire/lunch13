@@ -65,7 +65,7 @@ def add_money_process():
     elif response=='wrong_number':
         return redirect('/error/wrong_number/')
         
-    return render_template('add_money.html', school_num=school_num, seat_num=seat_num, how_much=how_much, leave_money=response)
+    return render_template('add_money_successful.html', school_num=school_num, seat_num=seat_num, how_much=how_much, leave_money=response)
 
 '''
 @app.route('/all_order')
