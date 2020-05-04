@@ -28,10 +28,11 @@ a:hover {
 	text-align: center;
 }
 @keyframes example {
-	0%   {background-color: red;}
-	25%  {background-color: yellow;}
-	50%  {background-color: blue;}
-	100% {background-color: green;}
+	0%   {transform: scale(2, 3);}
+ 	25%  {transform: scale(1, 1);}
+	50%  {transform: scale(2, 3);}
+	75%  {transform: scale(1, 1);}
+	100% {transform: scale(2, 3);}
 }
 .lunchtime {
 	height: 60px;
@@ -41,7 +42,7 @@ a:hover {
 	color: #ffffff;
 	transform: rotate(15deg);
 	animation-name: example;
-  	animation-duration: 0.5s;
+  	animation-duration: 1s;
 	
 }
 /*
