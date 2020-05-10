@@ -12,12 +12,31 @@
     </head>
     <body>
         <header class="header">
-            <h1 class="title">查詢結果<br>{{ date }}的訂單</h1>
+            <h1 class="title">查詢結果</h1>
         </header>
         
         <main>
             <div class="output-area"> <!-- enter-area -->
                 
+                <p class="text">
+                    查詢日期：{{ date[0:4] }}年{{ date[5:7] }}月{{ date[8:] }}日
+                    訂購人數：{{ seat_num_list|length }}
+                    交易總額：{{ total_price }}元
+                </p>
+                
+                {% if len(seat_num_list)==0 %}
+                <p class="text">查無結果！</p>
+                
+                {% else %}
+                <table class="table">
+                    <tr><td>座號</td><td>便當種類</td><td>交易金額</td></tr>
+                {% for s, r, p in  zip(seat_num_list, restaurant_list, price_list):%}
+                    
+                    <tr><td>{{ s }}</td><td>{{ r }}</td><td>{{ p }}</td></tr>
+                
+                {% endfor %}
+                </table>
+                {% endif %}
             </div>
             
             <p class="hint-text">
