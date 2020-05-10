@@ -20,7 +20,7 @@
                 <form method="POST" action="#" id="form">
                   
                     <input type="date" name="date" class="date" required>                    
-                    <input type="submit" value="送出" class="submit">  
+                    <button class="submit" onclick="search">search</button>
                   
                 </form>
             </div>
@@ -50,7 +50,7 @@
           
           
           
-          document.getElementById('form').onsubmit = function() {
+          function search() {
             var search = document.getElementById('form').date.value;
             document.getElementById('output').textContent = search;
             return false;
