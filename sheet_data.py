@@ -175,7 +175,11 @@ def get_order_by_date(date):
     輸入值：
       日期：字串，YYYY-MM-DD
     回傳值：
-      清單:[日期, 總金額, 座號清單, 餐廳清單, 價格清單]
+      日期：字串，YYYY-MM-DD
+      總金額：整數
+      座號清單：字串清單
+      餐廳清單：字串清單
+      價格清單：字串清單
     '''
     global order_sheet
     
@@ -191,7 +195,7 @@ def get_order_by_date(date):
         if date_list[i]!=str(date):
             remove_list.append(i)
         else:
-            total_price += price_list[i]
+            total_price += int(price_list[i])
     
     for i in remove_list:
         date_list.pop(i)
