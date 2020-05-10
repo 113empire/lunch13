@@ -68,12 +68,16 @@ def add_money_process():
     return render_template('add_money_successful.html', school_num=school_num, seat_num=seat_num, how_much=how_much, leave_money=response)
 
 
-@app.route('/all_order')
-def all_order():
-    response = sheet_data.get_all_order()
-    return render_template('all_order.html', date=response[0], seat_num=response[1], restaurant=response[2], price=response[3])
-
-
+@app.route('/search_order')
+def search_order():
+    return render_template('all_order.html')
+'''
+@app.route('/search_order_result', method=['GET', 'POST'])
+def search_order_result():
+    date = request.form.get('date')
+    response = sheet_data.get_order_by_date(date)
+    return render_template('search_order_result.html')
+'''
 @app.route('/update_menu')
 def update_menu_page():
     return render_template('update_menu.html')
