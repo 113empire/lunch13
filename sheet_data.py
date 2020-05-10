@@ -151,7 +151,7 @@ def order_meal(date, school_number, seat_number, restaurant, how_much):
         return 'error'
 
     
-def get_all_order():
+def get_all_order(): #正確性?
     '''
     取得所有訂購資料
     輸入值：
@@ -186,13 +186,13 @@ def get_order_by_date(date):
     
     total_price = 0
     remove_list = []
-    
+    return 'OK'#
     for i in range(len(date_list)):
         if date_list[i]!=str(date):
             remove_list.append(i)
         else:
             total_price += price_list[i]
-            
+    return 'OK'#
     for i in remove_list:
         date_list.pop(i)
         seat_number_list.pop(i)
