@@ -75,7 +75,7 @@ def search_order():
 @app.route('/search_order_result', methods=['GET', 'POST'])
 def search_order_result():
     date = request.form.get('date')
-    return date#
+    #以上OK
     response = sheet_data.get_order_by_date(date)
     return response#
     return render_template('search_order_result.html', date=response[0], total_price=response[1], \
