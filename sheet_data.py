@@ -134,12 +134,7 @@ def order_meal(date, school_number, seat_number, restaurant, how_much):
     try:
              
         state = spend_money(school_number, seat_number, how_much)
-        '''
-        if state!='error' and state!='wrong_number': #扣款成功
-            values = [date, seat_number, restaurant, how_much]
-            order_sheet.insert_row(values, 2)
-            return [date, school_number, seat_number, restaurant, how_much, state]
-        '''
+        
         if state=='error' or state=='wrong_number' or state=='not_enough':
             return state
         
@@ -156,6 +151,24 @@ def order_meal(date, school_number, seat_number, restaurant, how_much):
         return 'error'
 
     
+def get_all_order():
+    '''
+    Get all order data.
+    輸入值：
+      none
+    回傳值：
+      list:[date_list, seat_number_list, restaurant_list, price_list]
+    '''
+    global order_sheet
+    
+    date_list = order_sheet.col_values(1)
+    seat_number_list = order_sheet.col_values(2)
+    restaurant_list = order_sheet.col_values(3)
+    price_list = order_sheet.col_values(4)
+    
+    return [date_list, seat_number_list, restaurant_list, price_list]
+    
+
 #取得訂單資料
 #def get_order_data(start_index, end_index):
 
