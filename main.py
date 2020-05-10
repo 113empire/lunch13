@@ -72,7 +72,7 @@ def add_money_process():
 def search_order():
     return render_template('all_order.html')
 
-@app.route('/search_order_result', method=['GET', 'POST'])
+@app.route('/search_order_result', methods=['GET', 'POST'])
 def search_order_result():
     date = request.form.get('date')
     response = sheet_data.get_order_by_date(date)
