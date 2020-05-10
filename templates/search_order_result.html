@@ -24,18 +24,18 @@
                     交易總額：{{ total_price }}元
                 </p>
                 
-                {% if len(seat_num_list)==0 %}
-                <p class="text">查無結果！</p>
+                {% if seat_num_list==[] %}
+                    <p class="text">查無結果！</p>
                 
                 {% else %}
-                <table class="table">
-                    <tr><td>座號</td><td>便當種類</td><td>交易金額</td></tr>
-                {% for s, r, p in  zip(seat_num_list, restaurant_list, price_list):%}
+                    <table class="table">
+                        <tr><td>座號</td><td>便當種類</td><td>交易金額</td></tr>
+                    {% for i in range(len(seat_num_list)): %}
                     
-                    <tr><td>{{ s }}</td><td>{{ r }}</td><td>{{ p }}</td></tr>
+                        <tr><td>{{ seat_num_list[i] }}</td><td>{{ restaurant_list[i] }}</td><td>{{ price_list[i] }}</td></tr>
                 
-                {% endfor %}
-                </table>
+                    {% endfor %}
+                    </table>
                 {% endif %}
             </div>
             
