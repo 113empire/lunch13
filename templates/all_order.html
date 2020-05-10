@@ -1,2 +1,64 @@
-<!-- 超連結:  /manager_background回到後台  /回到首頁 -->
-<!-- 樣板:  重複執行列出:( 日期 重複執行列出: (座號 訂購種類 金額) 總金額 ) -->
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+    <head>
+        <meta charset="UTF-8">
+        <!-- RWD響應式設計：視窗寬度小於600像素時，就會切換版面配置 -->
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta http-equiv="x-ua-compatible" content="IE-edge">
+        <title>113午餐訂購平台 - </title>
+        <link rel="stylesheet" href="https://lunch13.herokuapp.com/static/css/reset.css">
+        <link rel="stylesheet" href="https://lunch13.herokuapp.com/static/css/order.css">
+        <link rel="shortcut icon" href="https://lunch13.herokuapp.com/static/favicon.ico">
+    </head>
+    <body>
+        <!-- <header class="header">
+            <h1 class="title">午餐訂購</h1>
+        </header> -->
+        
+        <header class="lunchtime">
+            <h1 class="title1">Lunch Time!!!</h1>
+        </header>
+        
+        <main>
+            <div class="enter-area">
+                <form method="POST" action="#" id="form">
+                  
+                    <input type="date" name="date" class="date" required>                    
+                    <input type="submit" value="送出" class="submit">  
+                  
+                </form>
+            </div>
+            
+            <div class="output-area">
+              <p id="output"></p>
+            </div>
+            
+            <p class="hint-text">
+              <a href="/manager_background">回到後台</a> <a href="/">回到首頁</a>
+            </p>
+            
+        </main>
+        
+        <footer class="footer">
+            <p>Copyright © 113empire team 2020<br>All right reserved.</p>
+        </footer>
+        
+        <script>
+          
+          var date = {{ date_list }};
+          var seat_num = {{ seat_num }};
+          var restaurant = {{ restaurant }};
+          var price = {{ price }};
+          
+          var total = 0;
+          
+          
+          
+          document.getElementById('form').onsubmit = function() {
+            var search = document.getElementById('form').word.value;
+            document.getElementById('output').textContent = search;
+          };
+          
+        </script>
+    </body>
+</html>
