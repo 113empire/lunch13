@@ -186,21 +186,21 @@ def get_order_by_date(date):
     
     total_price = 0
     remove_list = []
-    #以上OK
+    
     for i in range(len(date_list)):
         if date_list[i]!=str(date):
             remove_list.append(i)
         else:
             total_price += price_list[i]
-    #以上OK
+    
     for i in remove_list:
         date_list.pop(i)
         seat_number_list.pop(i)
         restaurant_list.pop(i)
         price_list.pop(i)
     
-    #return 'OK'
-    return [str(date), total_price]#, seat_number_list, restaurant_list, price_list]
+    
+    return str(date), total_price, seat_number_list, restaurant_list, price_list
     
 
 #取得個人交易紀錄
