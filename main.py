@@ -70,7 +70,7 @@ def add_money_process():
 
 @app.route('/search_order')
 def search_order():
-    return render_template('all_order.html')
+    return render_template('search_order.html')
 
 @app.route('/search_order_result', methods=['GET', 'POST'])
 def search_order_result():
