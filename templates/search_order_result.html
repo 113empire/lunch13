@@ -18,7 +18,7 @@
         <main>
             <div class="output-area"> <!-- enter-area -->
                 
-                <p class="text">
+                <!-- <p class="text">
                     查詢日期：{{ date[0:4] }}年{{ date[5:7] }}月{{ date[8:] }}日
                     訂購人數：{{ seat_num_list|length }}
                     交易總額：{{ total_price }}元
@@ -27,7 +27,7 @@
                 <table class="table">
                     <tr><td>座號</td><td>便當種類</td><td>交易金額</td></tr>
                     
-                <!-- {% for i in range(len(seat_num_list)): %}
+                {% for i in range(len(seat_num_list)): %}
                     
                     <tr><td>{{ seat_num_list[i] }}</td><td>{{ restaurant_list[i] }}</td><td>{{ price_list[i] }}</td></tr>
                 
