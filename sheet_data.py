@@ -14,7 +14,7 @@ order_sheet = sh.worksheet('order')
 money_sheet = sh.worksheet('money')
 
 
-# order_values ['日期', '座號', '選購餐廳', '交易金額']
+# order_values ['日期', '座號', '選購餐廳', '交易金額', '']
 # money_values ['學號', '座號', '餘額']
 
 
@@ -169,8 +169,39 @@ def get_all_order():
     return [date_list, seat_number_list, restaurant_list, price_list]
     
 
-#取得訂單資料
-#def get_order_data(start_index, end_index):
+def get_order_by_date(date):
+    '''
+    Get order data by date.
+    輸入值：
+      date
+    回傳值：
+      list:[date, total_price, seat_number_list, restaurant_list, price_list]
+    '''
+    global order_sheet
+    
+    date_list = order_sheet.col_values(1)
+    seat_number_list = order_sheet.col_values(2)
+    restaurant_list = order_sheet.col_values(3)
+    price_list = order_sheet.col_values(4)
+    
+    total_price = 0
+    remove_list = []
+    
+    for i in range(len(date_list)):
+        if date_list[i]!=date:
+            remove_list.append(i)
+        else:
+            total_price += price_list[i]
+            
+    for i in remove_list:
+        date_list.pop(i)
+        seat_number_list.pop(i)
+        restaurant_list.pop(i)
+        price_list.pop(i)
+    
+    
+    return [date_list, total_price, seat_number_list, restaurant_list, price_list]
+    
 
 #取得個人交易紀錄
-#def get_personal_order_data(school_number, seat_number, start_date):
+#def get_order_by_seat_number(seat_number, start_date):
