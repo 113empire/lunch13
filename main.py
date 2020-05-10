@@ -77,6 +77,7 @@ def search_order_result():
     date = request.form.get('date')
     response = list(sheet_data.get_order_by_date(date))
     #以上OK
+    return response[0]
     return render_template('search_order_result.html')#, date=response[0], total_price=response[1], \
     #                       seat_num_list=response[2], restaurant_list=response[3], price_list=response[4])
 
