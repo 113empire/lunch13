@@ -5,14 +5,14 @@
         <!-- RWD響應式設計：視窗寬度小於600像素時，就會切換版面配置 -->
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta http-equiv="x-ua-compatible" content="IE-edge">
-        <title>113午餐訂購平台 - </title>
+        <title>113午餐訂購平台 - 訂購資料查詢</title>
         <link rel="stylesheet" href="https://lunch13.herokuapp.com/static/css/reset.css">
         <link rel="stylesheet" href="https://lunch13.herokuapp.com/static/css/search_order.css">
         <link rel="shortcut icon" href="https://lunch13.herokuapp.com/static/favicon.ico">
     </head>
     <body>
         <header class="header">
-            <h1 class="title">午餐訂購</h1>
+            <h1 class="title">訂購資料查詢</h1>
         </header>
         
         <main>
@@ -20,7 +20,7 @@
                 <form method="POST" action="/search_order_result">
                   
                     <input type="date" name="date" class="date" required>                    
-                    <button class="submit" onclick="search">search</button>
+                    <input type="submit" value="查詢" class="submit">
                   
                 </form>
             </div>
@@ -30,7 +30,7 @@
             </div>
             
             <p class="hint-text">
-              <a href="/manager_background">回到後台</a> <a href="/">回到首頁</a>
+              <a href="/manager_background">管理員後台</a> <a href="/">回到首頁</a>
             </p>
             
         </main>
