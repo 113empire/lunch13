@@ -186,7 +186,7 @@ def get_order_by_date(date):
     
     total_price = 0
     remove_list = []
-    return 'OK'#
+    #以上OK
     for i in range(len(date_list)):
         if date_list[i]!=str(date):
             remove_list.append(i)
