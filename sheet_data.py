@@ -153,11 +153,11 @@ def order_meal(date, school_number, seat_number, restaurant, how_much):
     
 def get_all_order():
     '''
-    Get all order data.
+    取得所有訂購資料
     輸入值：
-      none
+      (無)
     回傳值：
-      list:[date_list, seat_number_list, restaurant_list, price_list]
+      清單:[日期清單, 座號清單, 餐廳清單, 金額清單]
     '''
     global order_sheet
     
@@ -171,11 +171,11 @@ def get_all_order():
 
 def get_order_by_date(date):
     '''
-    Get order data by date.
+    用日期取得訂購資料
     輸入值：
-      date
+      日期：字串，YYYY-MM-DD
     回傳值：
-      list:[date, total_price, seat_number_list, restaurant_list, price_list]
+      清單:[日期, 總金額, 座號清單, 餐廳清單, 價格清單]
     '''
     global order_sheet
     
