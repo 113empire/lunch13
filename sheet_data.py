@@ -204,7 +204,7 @@ def get_order_by_date(date):
         price_list.pop(i)
     
     
-    return str(date), total_price#, seat_number_list, restaurant_list, price_list
+    return str(date), total_price, seat_number_list, restaurant_list, price_list
     
 
 #取得個人交易紀錄
