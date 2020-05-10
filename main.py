@@ -67,12 +67,12 @@ def add_money_process():
         
     return render_template('add_money_successful.html', school_num=school_num, seat_num=seat_num, how_much=how_much, leave_money=response)
 
-'''
+
 @app.route('/all_order')
 def all_order():
     response = sheet_data.get_all_order()
     return render_template('all_order.html', date=response[0], seat_num=response[1], restaurant=response[2], price=response[3])
-'''
+
 
 @app.route('/update_menu')
 def update_menu_page():
