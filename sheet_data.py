@@ -200,8 +200,6 @@ def get_order_by_date(date):
         else:
             total_price += int(price_list[i])
             quantity += 1
-    
-    return 'OK'#
 
     for i in remove_list:
         date_list.pop(i)
