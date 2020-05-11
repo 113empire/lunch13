@@ -51,14 +51,14 @@ a:hover {
 	100% {transform: rotate(360deg);}
 	
 .title {
-	/*font-size: 30px;
-	text-align: center;*/
+	font-size: 30px;
+	text-align: center;/*
 	fontsize: 28px;
 	height: 100px;
 	width: 100%;
 	padding: 20px;
 	top:10px;
-	text-align: center;
+	text-align: center;*/
 	color: #dddd00;
 	position: relative;
 	/*transform: rotate(15deg);*/
