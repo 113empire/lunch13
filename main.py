@@ -77,8 +77,9 @@ def search_order_result():
     date = request.form.get('date')
     response = list(sheet_data.get_order_by_date(date))
     #以上OK
-    return render_template('search_order_result.html', date=response[0], total_price=response[1], \
-                           seat_num_list=response[2], restaurant_list=response[3], price_list=response[4])
+    return str(response)
+    return render_template('search_order_result.html', date=response[0], total_price=response[1], quantity=response[2]\
+                           seat_num_list=response[3], restaurant_list=response[4], price_list=response[5])
 
 @app.route('/update_menu')
 def update_menu_page():
