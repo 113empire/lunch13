@@ -200,10 +200,16 @@ def get_order_by_date(date):
             quantity += 1
     
     for i in remove_list:
+        '''
         date_list.pop(i)
         seat_number_list.pop(i)
         restaurant_list.pop(i)
         price_list.pop(i)
+        '''
+        del date_list[i]
+        del seat_number_list[i]
+        del restaurant_list[i]
+        del price_list[i]
     return 'OK'#
     return str(date), total_price, str(quantity), seat_number_list, restaurant_list, price_list
     
