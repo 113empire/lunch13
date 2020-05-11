@@ -204,7 +204,7 @@ def get_order_by_date(date):
         seat_number_list.pop(i)
         restaurant_list.pop(i)
         price_list.pop(i)
-    
+    return 'OK'#
     return str(date), total_price, str(quantity), seat_number_list, restaurant_list, price_list
     
 
