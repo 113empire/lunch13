@@ -75,7 +75,6 @@ def search_order():
 @app.route('/search_order_result', methods=['GET', 'POST'])
 def search_order_result():
     date = request.form.get('date')
-    return 'OK'#
     response = list(sheet_data.get_order_by_date(date))
     return 'OK'#
     #以上OK
