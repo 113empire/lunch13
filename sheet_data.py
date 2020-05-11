@@ -183,33 +183,22 @@ def get_order_by_date(date):
     '''
     global order_sheet
     
-    date_list = order_sheet.col_values(1)
-    seat_number_list = order_sheet.col_values(2)
-    restaurant_list = order_sheet.col_values(3)
-    price_list = order_sheet.col_values(4)
-    
+    date_cell_list = order_sheet.findall(str(date))
     total_price = 0
     quantity = 0
-    remove_list = []
     
-    for i in range(len(date_list)):
-        if date_list[i]!=str(date):
-            remove_list.append(i)
-        else:
-            total_price += int(price_list[i])
-            quantity += 1
+    for i in range(len(date_cell_list)):
+        r = date_cell_list[i].row()
+        c = date_cell_list[i].col()
+        
+        date_list.append(order_sheet.cell(r, c))
+        seat_number_list.append(order_sheet.cell(r, c+1))
+        restaurant_list.append(order_sheet.cell(r, c+2))
+        price_list.append(order_sheet.cell(r, c+3))
+        
+        total_price += int(price_list[i])
+        quantity += 1
     
-    for i in remove_list:
-        '''
-        date_list.pop(i)
-        seat_number_list.pop(i)
-        restaurant_list.pop(i)
-        price_list.pop(i)
-        '''
-        del date_list[i]
-        del seat_number_list[i]
-        del restaurant_list[i]
-        del price_list[i]
     return 'OK'#
     return str(date), total_price, str(quantity), seat_number_list, restaurant_list, price_list
     
