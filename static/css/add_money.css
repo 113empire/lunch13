@@ -62,9 +62,9 @@ a:hover {
 	color: #dddd00;
 	position: relative;*/
 	/*transform: rotate(15deg);*/
-	animation-name: example;
+	/*animation-name: example;
   	animation-duration: 2s;
-	animation-iteration-count: infinite;
+	animation-iteration-count: infinite;*/
 }
 
 .enter-area {
