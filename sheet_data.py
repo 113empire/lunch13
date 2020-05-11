@@ -189,6 +189,7 @@ def get_order_by_date(date):
     price_list = order_sheet.col_values(4)
     
     total_price = 0
+    quantity = 0
     remove_list = []
     
     for i in range(len(date_list)):
@@ -196,6 +197,7 @@ def get_order_by_date(date):
             remove_list.append(i)
         else:
             total_price += int(price_list[i])
+            quantity += 1
     
     for i in remove_list:
         date_list.pop(i)
@@ -204,7 +206,7 @@ def get_order_by_date(date):
         price_list.pop(i)
     
     
-    return str(date), total_price, seat_number_list, restaurant_list, price_list
+    return str(date), total_price, quantity, seat_number_list, restaurant_list, price_list
     
 
 #取得個人交易紀錄
