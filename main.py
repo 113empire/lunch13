@@ -80,7 +80,7 @@ def search_order_result():
     return 'OK'#
     #以上OK
     return str(response)
-    return render_template('search_order_result.html', date=response[0], total_price=response[1], quantity=response[2]\
+    return render_template('search_order_result.html', date=response[0], total_price=response[1], quantity=response[2], \
                            seat_num_list=response[3], restaurant_list=response[4], price_list=response[5])
 
 @app.route('/update_menu')
