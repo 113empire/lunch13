@@ -76,6 +76,7 @@ def search_order():
 def search_order_result():
     date = request.form.get('date')
     response = list(sheet_data.get_order_by_date(date))
+    return 'OK'
     #以上OK
     return str(response)
     return render_template('search_order_result.html', date=response[0], total_price=response[1], quantity=response[2]\
