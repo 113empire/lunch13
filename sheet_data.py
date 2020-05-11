@@ -192,8 +192,6 @@ def get_order_by_date(date):
     quantity = 0
     remove_list = []
     
-    return 'OK'#
-    
     for i in range(len(date_list)):
         if date_list[i]!=str(date):
             remove_list.append(i)
@@ -201,6 +199,8 @@ def get_order_by_date(date):
             total_price += int(price_list[i])
             quantity += 1
 
+    return 'OK'#
+    
     for i in remove_list:
         date_list.pop(i)
         seat_number_list.pop(i)
