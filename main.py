@@ -86,11 +86,11 @@ def search_order_result():
 def update_menu_page():
     return render_template('update_menu.html')
 
-'''
 @app.route('/menu_process', methods=['POST'])
 def menu_process():
-    
-'''
+    photos = request.form.get('menufile')
+    return photos
+
 
 @app.route('/check_money')
 def check_money_page():
