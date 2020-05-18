@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
-    <!-- 樣板: 重複執行: ( 商家名稱 菜單圖片 ) -->
-    <!-- 超連結: /回到首頁 -->
     <head>
         <meta charset="UTF-8">
-        <title>113午餐訂購平台 - 菜單</title>
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/menu.css">
-        <link rel="shortcut icon" href="favicon.ico">
+        <!-- RWD響應式設計：視窗寬度小於600像素時，就會切換版面配置 -->
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta http-equiv="x-ua-compatible" content="IE-edge">
+        <title>113午餐訂購平台 - 本週菜單</title>
+        <link rel="stylesheet" href="https://lunch13.herokuapp.com/static/css/reset.css">
+        <link rel="stylesheet" href="https://lunch13.herokuapp.com/static/css/order_successful.css">
+        <link rel="shortcut icon" href="https://lunch13.herokuapp.com/static/favicon.ico">
     </head>
     <body>
         <header class="header">
@@ -15,13 +16,24 @@
         </header>
         
         <main>
-            <div class="photo_area">
+            <div class="message-area">
                 
+                {% for path in src %}
+                    <img src="{{ path }}" class="image">
+                    <br>
+                {% endfor %}
+                
+                <p class="hint-text">
+                    若菜單有疏漏或未更新，請洽合作股長。<br>
+                    <a href="/" class=a-text>回到首頁</a>
+                </p>
+              
             </div>
+            
         </main>
         
         <footer class="footer">
-            <p>Copyright © 2020承峻工作室</p>
+            <p class="footer-text">Copyright © 113empire team 2020<br>All right reserved.</p>
         </footer>
     </body>
 </html>
