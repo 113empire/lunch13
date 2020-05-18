@@ -14,7 +14,7 @@ order_sheet = sh.worksheet('order')
 money_sheet = sh.worksheet('money')
 
 
-# order_values ['日期', '座號', '選購餐廳', '交易金額', '']
+# order_values ['日期', '座號', '選購餐廳', '交易金額', '餘額']
 # money_values ['學號', '座號', '餘額']
 
 
@@ -150,7 +150,34 @@ def order_meal(date, school_number, seat_number, restaurant, how_much):
     except:
         return 'error'
 
-    
+def get_personal_money(school_number, seat_number):
+    '''
+    確認餘額是否足夠
+    輸入值：
+      school_number：學號，主要索引
+      seat_number：座號，確認學號
+    回傳值：
+      'wrong_number'：學號座號不符
+      'error'：表示其他錯誤
+      其他：字串，餘額
+    '''
+    global money_sheet
+
+    try:
+        cell = money_sheet.find(str(school_number)) #尋找學號
+        r = cell.row #學號的列(橫)
+        c = cell.col #學號的欄(直)
+
+        if money_sheet.cell(r, c+1).value==str(seat_number): #如果學號的右邊一格等於座號
+            result = int(money_sheet.cell(r, c+2).value) #學號的右邊2格(原本的餘額)
+            return result
+        
+        else:
+            return 'wrong_number'
+        
+    except:
+        return 'error'
+         
 def get_all_order(): #正確性?
     '''
     取得所有訂購資料
