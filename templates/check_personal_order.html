@@ -1,1 +1,43 @@
-
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+    <!-- 超連結:  /回首頁 -->
+    <!-- 樣板:  日期{{ date }}  學號{{ school_num }}  座號{{ seat_num }}  
+               種類{{ restaurant }}  交易金額/價格{{ how_much }}  餘額{{ leave_money }}-->
+    <head>
+        <meta charset="UTF-8">
+        <!-- RWD響應式設計：視窗寬度小於600像素時，就會切換版面配置 -->
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta http-equiv="x-ua-compatible" content="IE-edge">
+        <title>113午餐訂購平台</title>
+        <link rel="stylesheet" href="https://lunch13.herokuapp.com/static/css/reset.css">
+        <link rel="stylesheet" href="https://lunch13.herokuapp.com/static/css/check_money_result.css">
+        <link rel="shortcut icon" href="https://lunch13.herokuapp.com/static/favicon.ico">
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="title">訂購成功！</h1>
+        </header>
+        
+        <main>
+            <div class="message-area">
+                <p class="text">
+                    學號：{{ school_num }}
+                    <br>
+                    座號：{{ seat_num }}
+                    <br>
+                    存款餘額：{{ leave_money }}元
+                </p>
+                
+                <p class="hint-text">
+                    <a href="/" class=a-text>回到首頁</a> <a href="/check_money" class=a-text>查詢餘額</a>
+                </p>
+                
+            </div>
+            
+        </main>
+        
+        <footer class="footer">
+            <p class="footer-text">Copyright © 113empire team 2020<br>All right reserved.</p>
+        </footer>
+    </body>
+</html>
