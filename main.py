@@ -101,8 +101,15 @@ def check_money_page():
 def check_money_result():
     school_num = request.form.get('school_num')
     seat_num = request.form.get('seat_num')
-    leave_money = sheet_data.get_personal_money(school_num, seat_num)
-    return render_template('check_money_result.html', school_num=school_num, seat_num=seat_num, leave_money=leave_money)
+    
+    response = sheet_data.get_personal_money(school_num, seat_num)
+    
+    if response=='wrong_number':
+        return redirect('/error/wrong_number/')
+    elif response=='error':
+        return redirect('/error/unknown/')
+    else:
+        return render_template('check_money_result.html', school_num=school_num, seat_num=seat_num, leave_money=response)
     
 '''
 @app.route('/check_personal_order')
