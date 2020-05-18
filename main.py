@@ -96,11 +96,15 @@ def menu_process():
 def check_money_page():
     return render_template('check_money.html')
 
-'''
+
 @app.route('/check_money_result', methods=['POST'])
 def check_money_result():
+    school_num = request.form.get('school_num')
+    seat_num = request.form.get('seat_num')
+    leave_money = sheet_data.get_personal_money(school_num, seat_num)
+    return render_template('check_money_result.html', school_num=school_num, seat_num=seat_num, leave_money=leave_money)
     
-
+'''
 @app.route('/check_personal_order')
 def check_personal_order():
     return render_template('check_personal_order.html')
