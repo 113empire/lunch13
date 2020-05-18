@@ -49,10 +49,10 @@ a:hover {
 	75%  {transform: rotate(270deg);}
 	
 	100% {transform: rotate(360deg);}
-	
+}
 .title {
 	font-size: 30px;
-	text-align: center;/*
+	text-align: center;
 	fontsize: 28px;
 	height: 100px;
 	width: 100%;
@@ -60,11 +60,11 @@ a:hover {
 	top:10px;
 	text-align: center;
 	color: #dddd00;
-	position: relative;*/
+	position: relative;
 	/*transform: rotate(15deg);*/
-	/*animation-name: example;
+	animation-name: example;
   	animation-duration: 2s;
-	animation-iteration-count: infinite;*/
+	animation-iteration-count: infinite;
 }
 
 .enter-area {
