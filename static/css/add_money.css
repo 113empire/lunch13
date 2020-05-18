@@ -63,7 +63,7 @@ a:hover {
 	position: relative;
 	/*transform: rotate(15deg);*/
 	animation-name: example;
-  	animation-duration: 2s;
+  	animation-duration: 8s;
 	animation-iteration-count: infinite;
 }
 
