@@ -82,6 +82,29 @@ def search_order_result():
     return render_template('search_order_result.html', date=response[0], total_price=response[1], quantity=response[2], \
                            seat_num_list=response[3], restaurant_list=response[4], price_list=response[5])
 
+# 測試 ==================================================
+photos = UploadSet('photos', IMAGES)
+
+@app.route('/upload', methods=['GET', 'POST'])
+def upload():
+    if request.method == 'POST' and 'photo' in request.files:
+        filename = photos.save(request.files['photo'])
+        rec = Photo(filename=filename, user=g.user.id)
+        rec.store()
+        flash("Photo saved.")
+        return redirect(url_for('show', id=rec.id))
+    return render_template('upload.html')
+
+@app.route('/photo/<id>')
+def show(id):
+    photo = Photo.load(id)
+    if photo is None:
+        abort(404)
+    url = photos.url(photo.filename)
+    return render_template('show.html', url=url, photo=photo)
+
+# 測試 ==================================================
+
 @app.route('/update_menu')
 def update_menu_page():
     return render_template('update_menu.html')
