@@ -131,13 +131,13 @@ def error(error_type):
         return render_template('error_wrong_number.html')
         
     elif error_type=='not_enough':
-        return render_template('error_money.html', )
+        return render_template('error_money.html', error_type='餘額不足')
         
     elif error_type=='too_much_money':
-        return render_template('error_money.html', )
+        return render_template('error_money.html', error_type="餘額過多")
         
     elif error_type=='no_restaurant':
-        return render_templates('error_no_restaurant.html', )
+        return render_templates('error_no_restaurant.html')
     
     return error_type
 
