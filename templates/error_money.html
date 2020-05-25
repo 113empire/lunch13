@@ -1,1 +1,31 @@
-
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+    <head>
+        <meta charset="UTF-8">
+        <title>錯誤 - {{ error_type }}</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/error_money.css">
+        <link rel="shortcut icon" href="favicon.ico">
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="title">{{ error_type }}</h1>
+        </header>
+        
+        <main>
+            <div class="enter_area">
+              {% if error_type == '餘額過多' %}
+                <p class="text">你錢儲值那麼多是要幹嘛?騙零用錢?(話說你真的那麼相信我們能夠好好管理你的錢嗎?)</p>
+              {% elif error_type == '餘額不足' %}
+                <p class="text">可憐哪~<\p>
+              {% endif %}
+                <br>
+                <a href="/" class="a-text">回到首頁</a>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <p>Copyright © 113empire team 2020<br>All right reserved.</p>
+        </footer>
+    </body>
+</html>
