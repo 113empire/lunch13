@@ -42,7 +42,8 @@ def order_process():
 
 @app.route('/menu')
 def menu():
-    return render_template('menu.html')
+    return redirect('https://drive.google.com/drive/folders/1XNfTK10RZr9Wu11NC1a76vu2yVtgcDjE?usp=sharing')
+    #return render_template('menu.html')
 
 @app.route('/manager_background')
 def manager_background():
@@ -81,7 +82,7 @@ def search_order_result():
     return str(response)
     return render_template('search_order_result.html', date=response[0], total_price=response[1], quantity=response[2], \
                            seat_num_list=response[3], restaurant_list=response[4], price_list=response[5])
-
+'''
 @app.route('/update_menu')
 def update_menu_page():
     return render_template('update_menu.html')
@@ -90,7 +91,7 @@ def update_menu_page():
 def menu_process():
     photos = request.form.get('menufile')
     return photos
-
+'''
 
 @app.route('/check_money')
 def check_money_page():
@@ -123,7 +124,6 @@ def check_personal_order_result():
 
 @app.route('/error/<error_type>')
 def error(error_type):
-    '''
     if error_type=='unknown':
         return render_template('error_machine.html')
         
@@ -138,7 +138,7 @@ def error(error_type):
         
     elif error_type=='no_restaurant':
         return render_templates('error_no_restaurant.html', )
-    '''
+    
     return error_type
 
 '''
