@@ -122,7 +122,7 @@ def check_personal_order_result():
     
 '''
 
-@app.route('/error/<error_type>')
+@app.route('/error/<error_type>/')
 def error(error_type):
     if error_type=='unknown':
         return render_template('error_machine.html')
