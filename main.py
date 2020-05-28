@@ -82,11 +82,12 @@ def search_order_result():
     return str(response)
     return render_template('search_order_result.html', date=response[0], total_price=response[1], quantity=response[2], \
                            seat_num_list=response[3], restaurant_list=response[4], price_list=response[5])
-'''
+
 @app.route('/update_menu')
 def update_menu_page():
-    return render_template('update_menu.html')
-
+    return redirect('https://drive.google.com/drive/folders/1XNfTK10RZr9Wu11NC1a76vu2yVtgcDjE?usp=sharing')
+    #return render_template('update_menu.html')
+'''
 @app.route('/menu_process', methods=['POST'])
 def menu_process():
     photos = request.form.get('menufile')
