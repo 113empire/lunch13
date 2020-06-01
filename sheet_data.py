@@ -211,6 +211,7 @@ def get_order_by_date(date):
     global order_sheet
     
     date_cell_list = order_sheet.findall(str(date))
+    date_list = []
     seat_number_list = []
     retsaurant_list = []
     price_list = []
