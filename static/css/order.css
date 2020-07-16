@@ -318,5 +318,5 @@ a:hover {
 	
 ::selection {
 	color: white;
-	background-color: black;
+	background: black;
 }
