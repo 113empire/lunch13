@@ -314,4 +314,9 @@ a:hover {
 	padding: 10px;
 	text-align: center;
 }
+
+	
+::selection {
+	color: white;
+	background-color: black;
 }
